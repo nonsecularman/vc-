@@ -27,38 +27,34 @@ bot = Client(
 
 
 # ================= ASSISTANT CLIENTS =================
+# ⚠️ Pyrogram 1.4.12 में session_string नहीं होता
 
 ASS_CLI_1 = (
-    Client(
-        "assistant1",
-        api_id=API_ID,
-        api_hash=API_HASH,
-        session_string=STRING_SESSION,
-    )
+    Client(STRING_SESSION, api_id=API_ID, api_hash=API_HASH)
     if STRING_SESSION and STRING_SESSION != "None"
     else None
 )
 
 user = (
-    Client("assistant2", api_id=API_ID, api_hash=API_HASH, session_string=SESSION2)
+    Client(SESSION2, api_id=API_ID, api_hash=API_HASH)
     if SESSION2 and SESSION2 != "None"
     else None
 )
 
 user3 = (
-    Client("assistant3", api_id=API_ID, api_hash=API_HASH, session_string=SESSION3)
+    Client(SESSION3, api_id=API_ID, api_hash=API_HASH)
     if SESSION3 and SESSION3 != "None"
     else None
 )
 
 user4 = (
-    Client("assistant4", api_id=API_ID, api_hash=API_HASH, session_string=SESSION4)
+    Client(SESSION4, api_id=API_ID, api_hash=API_HASH)
     if SESSION4 and SESSION4 != "None"
     else None
 )
 
 user5 = (
-    Client("assistant5", api_id=API_ID, api_hash=API_HASH, session_string=SESSION5)
+    Client(SESSION5, api_id=API_ID, api_hash=API_HASH)
     if SESSION5 and SESSION5 != "None"
     else None
 )
