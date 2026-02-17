@@ -14,7 +14,7 @@ bot = Client(
 )
 
 # Assistants (strings should be empty/None if not used)
-ASS_CLI_1 = Client(SESSION_NAME, api_id=API_ID, api_hash=API_HASH) if SESSION_NAME and SESSION_NAME != "None" else None
+ASS_CLI_1 = Client(STRING_SESSION, api_id=API_ID, api_hash=API_HASH) if STRING_SESSION and STRING_SESSION != "None" else None
 user     = Client(SESSION2,     api_id=API_ID, api_hash=API_HASH) if SESSION2     and SESSION2     != "None" else None
 user3    = Client(SESSION3,     api_id=API_ID, api_hash=API_HASH) if SESSION3     and SESSION3     != "None" else None
 user4    = Client(SESSION4,     api_id=API_ID, api_hash=API_HASH) if SESSION4     and SESSION4     != "None" else None
