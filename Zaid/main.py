@@ -1,5 +1,5 @@
 import random
-from config import API_HASH, API_ID, BOT_TOKEN, SESSION_NAME, SESSION2, SESSION3, SESSION4, SESSION5
+from config import API_HASH, API_ID, BOT_TOKEN, STRING_SESSION, SESSION2, SESSION3, SESSION4, SESSION5
 
 from pyrogram import Client
 from pytgcalls import PyTgCalls, idle
