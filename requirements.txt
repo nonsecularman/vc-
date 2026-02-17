@@ -1,24 +1,18 @@
 pyrogram==2.0.106
 tgcrypto
-pytgcalls
+pytgcalls==3.0.0.dev22
 
 ffmpeg-python
 yt-dlp
 youtube-search-python
-youtube-search
+
+aiohttp
+aiofiles
+requests
 
 python-dotenv
 dnspython
-gitpython
 
-aiofiles
-aiohttp
-asgiref
-
-requests
-pillow
-
-heroku3
 motor
 pymongo
 
