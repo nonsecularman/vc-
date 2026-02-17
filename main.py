@@ -1,17 +1,23 @@
 import asyncio
-from pytgcalls import idle
-from Zaid.Database import db
+import logging
 
-import os
-import sys
-import random
-import asyncio
-from config import API_HASH, API_ID, BOT_TOKEN, SESSION_NAME, SESSION2
-from pyrogram import Client
-from pytgcalls import PyTgCalls
-from Zaid.main import *
+logging.basicConfig(level=logging.INFO)
 
+async def runner():
+    from Zaid.main import start_bot
+    from pytgcalls import idle
 
+    for attempt in range(1, 6):
+        try:
+            await start_bot()
+            break
+        except Exception as e:
+            logging.exception(f"start_bot() failed (attempt {attempt}/5): {e}")
+            await asyncio.sleep(5)
+    else:
+        raise SystemExit("Bot could not start after retries.")
 
-loop = asyncio.get_event_loop()
-loop.run_until_complete(start_bot())
+    await idle()
+
+if __name__ == "__main__":
+    asyncio.run(runner())
