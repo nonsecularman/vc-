@@ -11,7 +11,7 @@ if os.path.exists("local.env"):
 load_dotenv()
 admins = {}
 
-SESSION_NAME = getenv("SESSION_NAME")
+STRING_SESSION = getenv("STRING_SESSION")
 
 if str(getenv("STRING_SESSION2")).strip() == "":
     SESSION2 = str(None)
