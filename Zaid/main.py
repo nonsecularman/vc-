@@ -11,6 +11,7 @@ from config import (
     SESSION5,
 )
 
+# ✅ IMPORTANT (idle pyrogram से लेना है)
 from pyrogram import Client, idle
 from pytgcalls import PyTgCalls
 
@@ -27,7 +28,7 @@ bot = Client(
 
 
 # ================= ASSISTANT CLIENTS =================
-# ⚠️ Pyrogram 1.4.12 में session_string नहीं होता
+# Pyrogram 1.4.12 में session_string use नहीं होता
 
 ASS_CLI_1 = (
     Client(STRING_SESSION, api_id=API_ID, api_hash=API_HASH)
@@ -122,4 +123,5 @@ async def start_bot():
     print("[INFO]: All clients started successfully.")
     print("[INFO]: Bot is now idle...")
 
+    # ✅ bot alive रहेगा
     await idle()
